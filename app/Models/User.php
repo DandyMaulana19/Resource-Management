@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'status',
     ];
 
     /**
@@ -44,5 +45,50 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Check if user is currently online
+     */
+    public function isOnline(): bool
+    {
+        $userActivityService = app(\App\Services\UserActivityService::class);
+        return $userActivityService->isUserOnline($this->id);
+    }
+
+    /**
+     * Get user's last activity
+     */
+    public function getLastActivity(): ?array
+    {
+        $userActivityService = app(\App\Services\UserActivityService::class);
+        return $userActivityService->getUserActivity($this->id);
+    }
+
+    /**
+     * Scope for active users
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('status', 'active');
+    }
+
+    /**
+     * Scope for inactive users
+     */
+    public function scopeInactive($query)
+    {
+        return $query->where('status', 'inactive');
+    }
+
+    /**
+     * Scope for online users
+     */
+    public function scopeOnline($query)
+    {
+        $userActivityService = app(\App\Services\UserActivityService::class);
+        $onlineUserIds = $userActivityService->getOnlineUsers();
+        
+        return $query->whereIn('id', $onlineUserIds);
     }
 }

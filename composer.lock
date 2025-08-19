@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "79dc826a33a6c66bdef0285282b8acff",
+    "content-hash": "958c06673a98badd9f36484a8851fbc4",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -614,6 +614,69 @@
                 }
             ],
             "time": "2025-02-21T08:52:11+00:00"
+        },
+        {
+            "name": "devrabiul/laravel-toaster-magic",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devrabiul/laravel-toaster-magic.git",
+                "reference": "09313fd8f3c2b72640678f47f4ddbed0f16d5041"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devrabiul/laravel-toaster-magic/zipball/09313fd8f3c2b72640678f47f4ddbed0f16d5041",
+                "reference": "09313fd8f3c2b72640678f47f4ddbed0f16d5041",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "ToastMagic": "Devrabiul\\ToastMagic\\Facades\\ToastMagic"
+                    },
+                    "providers": [
+                        "Devrabiul\\ToastMagic\\ToastMagicServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Devrabiul\\ToastMagic\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Rabiul",
+                    "email": "devrabiul@gmail.com",
+                    "homepage": "https://rixetbd.com",
+                    "role": "Software Engineer"
+                }
+            ],
+            "description": "Laravel Toaster Magic is a lightweight, flexible toast library for Laravel projects, with no jQuery, Bootstrap, or Tailwind dependency.",
+            "homepage": "https://github.com/devrabiul/laravel-toaster-magic",
+            "keywords": [
+                "dynamic-notifications",
+                "flash-notifications",
+                "laravel",
+                "laravel-toastr",
+                "livewire",
+                "livewire-toaster",
+                "magic",
+                "notifications",
+                "php",
+                "toaster",
+                "toastr"
+            ],
+            "support": {
+                "issues": "https://github.com/devrabiul/laravel-toaster-magic/issues",
+                "source": "https://github.com/devrabiul/laravel-toaster-magic/tree/v1.3"
+            },
+            "time": "2025-07-31T09:09:24+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -4231,6 +4294,69 @@
                 "source": "https://github.com/antonioribeiro/google2fa-qrcode/tree/v3.0.0"
             },
             "time": "2021-08-15T12:53:48+00:00"
+        },
+        {
+            "name": "predis/predis",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/predis/predis.git",
+                "reference": "9e9deec4dfd3ebf65d32eb368f498c646ba2ecd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/predis/predis/zipball/9e9deec4dfd3ebf65d32eb368f498c646ba2ecd8",
+                "reference": "9e9deec4dfd3ebf65d32eb368f498c646ba2ecd8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "psr/http-message": "^1.0|^2.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.3",
+                "phpstan/phpstan": "^1.9",
+                "phpunit/phpcov": "^6.0 || ^8.0",
+                "phpunit/phpunit": "^8.0 || ~9.4.4"
+            },
+            "suggest": {
+                "ext-relay": "Faster connection with in-memory caching (>=0.6.2)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Till Krüss",
+                    "homepage": "https://till.im",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A flexible and feature-complete Redis/Valkey client for PHP.",
+            "homepage": "http://github.com/predis/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "support": {
+                "issues": "https://github.com/predis/predis/issues",
+                "source": "https://github.com/predis/predis/tree/v3.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/tillkruss",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-08-06T06:41:24+00:00"
         },
         {
             "name": "psr/clock",
